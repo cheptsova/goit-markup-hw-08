@@ -175,7 +175,6 @@ link:not(:first-child){
     padding-left: 50px;
 }
 .header-mail{
-    margin-left: 10px;
     align-items: center;
     display: flex;
 }
@@ -368,7 +367,6 @@ margin-left: 10px;
     justify-content: center;
     width: 44px;
     height: 44px;
-    padding: 12px;
     border-radius: 50%;
 
     color: var(--svg-color);
@@ -430,6 +428,7 @@ color: var(--tittle-text-color);
 }
 .clients-item{
     display: inline-block;
+    margin-top: 50px;
 } 
 .href-client{
     align-items: center;
@@ -440,7 +439,6 @@ color: var(--tittle-text-color);
     color: var(--svg-color);
     border: 1px solid var(--svg-color);
     border-radius: 4px;
-    margin-top: 50px;
 }
 .href-client:not(:first-child){
     margin-left: 30px;
@@ -460,7 +458,7 @@ color: var(--tittle-text-color);
 }
 .footer-container{
 display: flex; 
-align-items: center;   
+align-items: baseline;   
 }
 .footer .logo-link{
     font-family: 'Raleway', sans-serif;
