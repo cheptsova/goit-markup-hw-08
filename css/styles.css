@@ -594,14 +594,17 @@ padding-bottom: 94px;
         gap: var(--card-set-gap);
     
     }
-    .holder > .portofolio-list{
+    .portofolio-list{
+        display: block;
         flex-basis: calc((100% - 2 * 30px) / 3);  
     }
-.portofolio-list:hover,
-.portfolio-list:focus
-{
-    box-shadow: var(--portfolio-shadow);
-}
+    .href-portfolio{
+        display: block;
+    }
+    .href-portfolio:hover,
+    .href-portfolio:focus{
+        box-shadow: var(--portfolio-shadow);
+    }
     .card-content{
       padding: 24px; 
       border-left: 1px solid var(--portfolio-border);
