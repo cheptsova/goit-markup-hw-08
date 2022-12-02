@@ -757,3 +757,52 @@ padding-bottom: 94px;
         transform: translate(-50%, -50%);
         fill:currentColor;
     }
+/* Форма */
+.form-field{
+    position: relative;
+    fill: var(--tittle-text-color);
+}
+
+.form-tittle{
+font-weight: 700;
+font-size: 20px;
+line-height: 1.15;
+text-align: center;
+color: var(--tittle-text-color);
+}
+.form-name{
+     
+    display: block;
+    font-weight: 400;
+font-size: 12px;
+line-height: 1.17;
+letter-spacing: 0.01em;
+color: var(--content-text-color);
+}
+.form-name:not(:first-child){
+    margin-top: 10px;
+}
+.form-input{
+    width: 448px;
+    height: 40px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+}
+.form-svg{
+    position: absolute;
+    display: inline-block;
+    left: 12px;
+    top: 50%;
+
+    fill: var(--tittle-text-color);
+    transform: translateY(-50%);
+}
+.textarea-text{
+    display: block;
+}
+.agreenment{
+    font-weight: 400;
+font-size: 14px;
+line-height: 1.71;
+color: var(--content-text-color);
+}
