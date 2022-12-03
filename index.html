@@ -364,7 +364,8 @@
                 <a class="footer-tel" href="tel:+380961111111">+38 096 111 11 11</a>
             </li>
         </ul>
-    </address></div>
+    </address>
+</div>
             
         <div class="footer-svg">
         <p class="join">Приєднуйтесь</p>
@@ -399,6 +400,19 @@
             </li>
         </ul>
     </div>
+    <div class="container-footer-form">
+        <p class="footer-form-tittle">Підпишіться на розсилку</p>
+        <form action="" class="footer-form">
+            <input type="text" class="footer-input" placeholder="E-mail">
+                <button class="footer-form-button" type="button">
+                    Підписатися
+                    <svg class="icon-send" width="24px" height="24px">
+                        <use href="./images/icons.svg#icon-icon-send"></use>
+                    </svg>
+                </button>
+           
+        </form>
+    </div>
     </div>  
 </footer>
 <div data-modal class="backdrop is-hidden">
@@ -409,37 +423,56 @@
             </svg>
             </button>
             
-            <form class="form" action="">
-                <span clas="form-tittle">Залиште свої дані, ми вам передзвонимо</span>
+            <form class="form">
+                <p class="form-tittle">Залиште свої дані, ми вам передзвонимо</p>
                 <div class="form-field">
-                    <svg class="form-svg" width="18px" height="18px">
-                        <use href="./images/icons.svg#icon-person-black"></use>
-                    </svg>
                     <label for="name" class="form-name">Ім'я</label>
-                    <input type="text" class="form-input" name="name">
-                    
-                </div>
+                    <div class="form-div-svg">
+                        <input type="text" class="form-input" name="name" id="name">
+                        <svg class="form-svg" width="18px" height="18px">
+                            <use href="./images/icons.svg#icon-person-black"></use>
+                        </svg>
+                    </div>
+                    </div>
                 <div class="form-field">
                     <label for="tel" class="form-name">Телефон</label>
-                    <input type="tel" class="form-input" name="tel">
-                    <svg class="form-svg" width="18px" height="18px">
-                        <use href="./images/icons.svg#icon-phone-black"></use>
-                    </svg>
+                    <div class="form-div-svg">
+                        <input type="tel" class="form-input" name="tel" id="tel">
+                        <svg class="form-svg" width="18px" height="18px">
+                            <use href="./images/icons.svg#icon-phone-black"></use>
+                        </svg>
                     </div>
+                     </div>
                 <div class="form-field">
                     <label for="email" class="form-name">Пошта</label>
-                    <input type="email" class="form-input" name="email">
-                    <svg class="form-svg" width="18px" height="18px">
-                        <use href="./images/icons.svg#icon-email-black"></use>
-                    </svg>
-                    <div class="textarea">
-                        <label for="textarea" class="textarea-text">Коментар</label>
-                        <textarea name="textarea" id="" cols="30" rows="10"></textarea>
+                    <div class="form-div-svg">
+                        <input type="email" class="form-input" name="email"  id="email">
+                        <svg class="form-svg" width="18px" height="18px">
+                            <use href="./images/icons.svg#icon-email-black"></use>
+                        </svg>
                     </div>
-                    <svg width="16px" height="15px">
-                        <use href="./images/icons.svg#icon-icon-check "></use>
+                     <div class="textarea-div">
+                        <label for="textarea" class="textarea-text">Коментар
+                            <textarea class="textarea" name="textarea" placeholder="Введіть текст">
+
+                            </textarea>
+                            </label>
+                        
+                    </div>
+                    <div class="check">
+                        <label class="modal-check">
+                          <input type="checkbox" name="checkbox" value="check" class="checkbox">
+                    <svg width="16px" height="15px" class="icon-check">
+                        <use href="./images/icons.svg#icon-check"></use>
                     </svg>
-                    <span class="agreenment">Погоджуюся з розсилкою та приймаю Умови договору</span>
+                
+                    <p class="agreenment">Погоджуюся з розсилкою та приймаю
+                        <a href="./index.html" class="a-modal">Умови
+                        договору
+                    </a>
+                    </p>
+                </label>    
+                    </div>
                     <button class="modal-form-button" type="button">Відправити</button>
                     </div>
             </form>
