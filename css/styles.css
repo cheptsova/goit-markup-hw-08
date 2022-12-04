@@ -500,7 +500,9 @@ link:not(:first-child) {
 .clients-svg {
   fill: currentColor;
 }
+
 /* Footer */
+
 .footer {
   background-color: var(--hero-bcg-color);
   padding-bottom: 60px;
