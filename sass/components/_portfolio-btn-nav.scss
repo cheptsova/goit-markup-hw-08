@@ -1,0 +1,36 @@
+/* Button site navigation */
+
+.examples {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.btn-list {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.btn-list__item:not(:first-child) {
+  margin-left: 8px;
+}
+.btn-list__button {
+  font-family: "Roboto", sans-serif;
+  color: $tittle-text-color;
+  background-color: $team-bcg-color;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+
+  border-radius: 4px;
+  border: 1px solid transparent;
+  padding: 6px 22px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: $primary-text-color;
+    background-color: $accent-color;
+    box-shadow: $btn-shadow;
+  }
+}

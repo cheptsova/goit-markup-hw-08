@@ -1,0 +1,46 @@
+/* Клієнти */
+.clients {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.clients__tittle {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  color: $tittle-text-color;
+}
+.clients-list {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+.clients-list__item {
+  display: inline-block;
+}
+.clients-list__href {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  width: 170px;
+  height: 92px;
+  color: $svg-color;
+  border: 1px solid $svg-color;
+  border-radius: 4px;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:not(:first-child) {
+    margin-left: 30px;
+  }
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+    border: 1px solid $accent-color;
+  }
+}
+
+.clients-list__svg {
+  fill: currentColor;
+}

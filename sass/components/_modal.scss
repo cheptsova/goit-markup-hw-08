@@ -1,0 +1,221 @@
+/* Модалка */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $backdrop-bcg-color;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+.modal {
+  position: absolute;
+  height: 581px;
+  width: 528px;
+  padding: 40px;
+  background-color: $primary-text-color;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 4px;
+}
+
+/* Кнопка модалки */
+.button-close {
+  position: fixed;
+  top: 8px;
+  right: 8px;
+  height: 30px;
+  width: 30px;
+  padding: 6px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  color: #000;
+  background-color: $primary-text-color;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.button-close__svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  fill: currentColor;
+}
+/* Форма */
+.modal-form-tittle {
+  margin-bottom: 12px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  color: $tittle-text-color;
+}
+.form-field {
+  fill: $primary-text-color;
+  &:not(:first-child) {
+    margin-top: 10px;
+  }
+}
+
+.form-field__name {
+  display: block;
+  margin-bottom: 4px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: $content-text-color;
+}
+
+.form-wrapper {
+  position: relative;
+}
+
+.form-wrapper__input {
+  display: flex;
+
+  padding-left: 42px;
+  width: 448px;
+  height: 40px;
+  outline: none;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:focus {
+    border: 1px solid #2196f3;
+    border-radius: 4px;
+  }
+}
+
+.form-wrapper__svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  left: 12px;
+  top: 50%;
+
+  fill: $tittle-text-color;
+  transform: translateY(-50%);
+  background-color: $primary-text-color;
+}
+
+.form-wrapper__input:focus ~ .form-wrapper__svg {
+  color: $accent-color;
+  fill: $accent-color;
+}
+
+.form-field__textarea {
+  display: block;
+  width: 448px;
+  height: 120px;
+  padding: 12px 16px;
+  resize: none;
+  outline: none;
+  cursor: pointer;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:focus {
+    border: 1px solid $accent-color;
+  }
+}
+
+/* Чекбокс */
+
+.checkbox {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+.checkbox-wrapper {
+  display: flex;
+  align-items: center;
+}
+.checkbox-wrapper__input {
+  appearance: none;
+  transition: background-image 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.checkbox-wrapper__icon-check {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  border: 2px solid $tittle-text-color;
+  border-radius: 2px;
+  fill: $primary-text-color;
+}
+
+.checkbox-wrapper__input:checked + .checkbox-wrapper__icon-check {
+  background-color: $accent-color;
+  border-color: $accent-color;
+  background-image: url(../images/icons.svg#icon-check);
+  background-size: contain;
+  border-color: transparent;
+  background-origin: border-box;
+}
+.checkbox-wrapper__text {
+  margin-left: 7px;
+}
+
+// .agreenment {
+//   color: $content-text-color;
+//   font-weight: 400;
+//   font-size: 14px;
+//   line-height: 1.71;
+//   color: $content-text-color;
+// }
+// .a-modal {
+//   display: inline-block;
+//   padding: 0;
+//   margin: 0;
+//   color: $accent-color;
+//   text-decoration: underline;
+// }
+.checkbox__button {
+  display: block;
+  margin-left: 124px;
+  color: $primary-text-color;
+  background-color: $accent-color;
+  box-shadow: $btn-hero-shadow;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+
+  padding: 10px 52px;
+  min-width: 200px;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  align-items: center;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    background-color: $btn-color;
+    color: $primary-text-color;
+    box-shadow: $btn-hero-shadow;
+    border-radius: 4px;
+  }
+}
