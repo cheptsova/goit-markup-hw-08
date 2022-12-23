@@ -1,28 +1,52 @@
 /* Клієнти */
 .clients {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @include desktop {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 .clients__tittle {
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
+  font-size: 28px;
+  line-height: 1.14;
   text-align: center;
   color: $tittle-text-color;
+
+  @include desktop {
+    font-size: 36px;
+    line-height: 1.17;
+  }
 }
 .clients-list {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  margin-top: 50px;
 }
 .clients-list__item {
   display: inline-block;
+
+  @include tel {
+    flex-basis: calc(50% - $card-set-gap);
+    margin-top: 30px;
+  }
+
+  @include tablet {
+    flex-basis: calc((100% - 2 * $card-set-gap) / 3);
+    width: 226px;
+  }
+
+  @include desktop {
+    flex-basis: calc((100% - 5 * $card-set-gap) / 6);
+    width: 170px;
+  }
 }
 .clients-list__href {
   align-items: center;
   display: flex;
   justify-content: center;
-  width: 170px;
   height: 92px;
   color: $svg-color;
   border: 1px solid $svg-color;

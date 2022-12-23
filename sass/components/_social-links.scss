@@ -1,0 +1,40 @@
+.social-media {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+
+  margin: 0;
+  margin-top: 64px;
+  color: $accent-color;
+
+  @media screen and (min-width: 767px) {
+    display: none;
+  }
+}
+.social-media__item {
+  display: flex;
+  align-items: center;
+  justify-content: baseline;
+  position: relative;
+}
+.social-media__item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.social-media__item:nth-child(n + 2)::after {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: rgba(33, 33, 33, 0.2);
+  width: 22px;
+  height: 1px;
+  top: 90%;
+  left: -10%;
+  transform-origin: bottom left;
+
+  transform: rotate(-90deg);
+}

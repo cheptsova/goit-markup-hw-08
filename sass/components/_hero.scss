@@ -6,11 +6,40 @@
   height: 600px;
   background-color: $hero-bcg-color;
   background-image: linear-gradient(to right, $hero-gradient, $hero-gradient),
-    url(../images/background-img.jpg);
+    url(../../images/background-img_mob.jpg);
+
+  @include retina {
+    background-image: linear-gradient(to right, $hero-gradient, $hero-gradient),
+      url(../../images/background-img__mob-2x.jpg);
+  }
   background-position: center;
   background-repeat: no-repeat;
   padding-top: 200px;
   padding-bottom: 200px;
+
+  @include tablet {
+    background-image: linear-gradient(to right, $hero-gradient, $hero-gradient),
+      url(../../images/background-img_tablet.jpg);
+
+    @include retina {
+      background-image: linear-gradient(
+          to right,
+          $hero-gradient,
+          $hero-gradient
+        ),
+        url(../../images/background-img_tablet-2x.jpg);
+    }
+  }
+
+  @include desktop {
+    background-image: linear-gradient(to right, $hero-gradient, $hero-gradient),
+      url(../../images/background-img.jpg);
+  }
+
+  @include retina {
+    background-image: linear-gradient(to right, $hero-gradient, $hero-gradient),
+      url(../../images/background-img-2x.jpg);
+  }
 }
 
 .hero-container {
@@ -24,6 +53,17 @@
   letter-spacing: 0.06em;
   text-align: center;
   text-transform: uppercase;
+
+  @media screen and (max-width: 1200px) {
+    font-size: 26px;
+    line-height: 1.62;
+    text-align: center;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 44px;
+    line-height: 1.36;
+  }
 }
 
 .hero-container__btn {

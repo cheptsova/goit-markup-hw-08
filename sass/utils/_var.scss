@@ -18,6 +18,8 @@ $portfolio-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
   0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 $work-list-bcg-shadow: rgba(47, 48, 58, 0.8);
 $backdrop-bcg-color: rgba(0, 0, 0, 0.2);
+$mobile-bcg-color: rgba(33, 33, 33, 0.2);
+$time-animacion: cubic-bezier(0.4, 0, 0.2, 1);
 
 html {
   box-sizing: border-box;
@@ -66,7 +68,7 @@ ul {
 
 img {
   display: block;
-  max-width: 100%;
+  width: 100%;
   height: auto;
 }
 
@@ -86,7 +88,19 @@ img {
 
 .container {
   margin: 0 auto;
-  width: 1200px;
+  width: 100%;
   padding-left: 15px;
   padding-right: 15px;
+
+  @media screen and (min-width: 480px) {
+    width: 480px;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 768px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
+  }
 }

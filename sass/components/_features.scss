@@ -1,9 +1,13 @@
 /* Features */
 
 .features {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 
+  @include desktop {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
   &__tittle {
     margin-bottom: 10px;
 
@@ -17,12 +21,29 @@
 
 .feature-list {
   display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+  margin-bottom: -30px;
 }
 .feature-list__item {
-  max-width: 270px;
+  width: 100%;
 
+  @include tel {
+    flex-basis: calc(50% - $card-set-gap);
+
+    margin-left: $card-set-gap;
+    margin-bottom: $card-set-gap;
+    padding: 0;
+    max-width: 354px;
+  }
+
+  @include desktop {
+    max-width: 270px;
+  }
   &:not(:first-child) {
-    margin-left: 30px;
+    @include desktop {
+      margin-left: 30px;
+    }
   }
 }
 
@@ -30,23 +51,36 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 270px;
+  max-width: 450px;
   height: 120px;
   padding: 0;
   margin-bottom: 30px;
 
   background-color: $team-bcg-color;
   border-radius: 4px;
+
+  @include tablet {
+    max-width: 354px;
+  }
+
+  @include desktop {
+    width: 270px;
+  }
 }
 
 .feature-list__tittle {
   margin-bottom: 10px;
+  text-align: center;
 
   color: $tittle-text-color;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
+
+  @include tablet {
+    text-align: left;
+  }
 }
 
 .feature-list__content {

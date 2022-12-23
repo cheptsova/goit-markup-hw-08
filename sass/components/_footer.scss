@@ -3,11 +3,31 @@
   padding-bottom: 60px;
   padding-top: 60px;
 }
+
 .footer-container {
-  display: flex;
-  align-items: baseline;
+  text-align: center;
+
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  @include desktop {
+    flex-wrap: nowrap;
+    justify-content: baseline;
+    text-align: start;
+  }
 }
 .footer-logo {
+  display: inline-block;
+  margin-bottom: 28px;
+
+  @include desktop {
+    margin-bottom: 20px;
+  }
+
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-size: 26px;
@@ -15,8 +35,10 @@
   color: $primary-text-color;
   text-decoration: none;
 
-  display: inline-block;
-  margin-bottom: 20px;
+  @include tel {
+    font-size: 24px;
+    line-height: 1.17;
+  }
 }
 
 .footer-logo__span {
@@ -28,7 +50,11 @@
   font-style: normal;
 }
 .footer-list:not(:last-child) {
-  margin-bottom: 9px;
+  margin-bottom: 12px;
+
+  @include desktop {
+    margin-bottom: 9px;
+  }
 }
 .footer-list__href-address {
   color: $primary-text-color;
@@ -59,10 +85,14 @@
 }
 
 .footer-wrapper {
-  margin-left: 94px;
+  @include desktop {
+    margin-left: 94px;
+  }
 }
 
 .footer-wrapper__tittle {
+  margin-top: 60px;
+
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -73,7 +103,17 @@
 // Form
 
 .container-form {
-  margin-left: 93px;
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 60px;
+  }
+
+  @include desktop {
+    display: block;
+    margin-left: 93px;
+  }
 }
 .container-form__tittle {
   margin-bottom: 20px;
@@ -84,11 +124,23 @@
   color: $primary-text-color;
 }
 .container-form__wrapper {
-  display: flex;
+  display: block;
+
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  @include desktop {
+    flex-wrap: nowrap;
+    justify-content: baseline;
+    text-align: start;
+  }
 }
 .container-form__input {
-  margin-right: 12px;
-  width: 358px;
+  margin-bottom: 20px;
+  width: 100%;
   height: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -105,14 +157,28 @@
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
+
+  @include tablet {
+    width: 450px;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+
+  @include desktop {
+    margin-bottom: 0;
+    margin-right: 12px;
+    width: 358px;
+  }
 }
 
 .container-form__button {
-  display: flex;
   align-items: center;
+  display: inline-flex;
   border: none;
   cursor: pointer;
   padding-left: 28px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   letter-spacing: 0.06em;
   min-width: 200px;
   font-weight: 700;
@@ -131,6 +197,10 @@
     background-color: $btn-color;
     color: $primary-text-color;
     box-shadow: $btn-hero-shadow;
+  }
+
+  @include desktop {
+    display: flex;
   }
 }
 

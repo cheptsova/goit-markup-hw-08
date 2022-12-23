@@ -10,7 +10,15 @@
 
 .portofolio-list__item {
   display: block;
-  flex-basis: calc((100% - 2 * 30px) / 3);
+  width: 100%;
+
+  @include tablet {
+    flex-basis: calc(50% - $card-set-gap);
+  }
+
+  @include desktop {
+    flex-basis: calc((100% - 2 * 30px) / 3);
+  }
 }
 
 .card-box {
