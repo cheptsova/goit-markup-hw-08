@@ -10,7 +10,7 @@
   display: flex;
   flex-direction: column;
   z-index: 1;
-  background-color: #fff;
+  background-color: $primary-text-color;
   overflow-y: scroll;
   font-size: 40px;
   letter-spacing: 0.02em;
@@ -19,83 +19,99 @@
   @media screen and (min-width: 768px) {
     display: none;
   }
-  &__site {
-    display: block;
-    font-weight: 500;
-    text-decoration: none;
-    letter-spacing: 0.02em;
-    color: $tittle-text-color;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    &:hover,
-    &:focus {
-      color: $accent-color;
-    }
-  }
-  &__site:not(:last-child) {
-    margin-bottom: 32px;
-  }
 }
+
 .mobile.is-open {
   transform: translateX(0);
 }
-.mobile-header {
-  margin-top: auto;
-  margin-bottom: 64px;
-  &__item {
-    padding-bottom: 32px;
-  }
-  &__link {
-    font-size: 24px;
-    display: flex;
-    align-items: center;
-    letter-spacing: 0.02em;
-    color: $text-color;
-    text-decoration: none;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-      fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    &:hover,
-    &:focus {
-      color: $accent-color;
-      font-size: 40px;
-    }
+
+.mobile-list__link {
+  display: block;
+  font-weight: 500;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  color: $tittle-text-color;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
   }
 }
+.mobile-list__link:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.mobile-contact-item {
+  margin-top: auto;
+  margin-bottom: 64px;
+}
+
+.mobile-contact-item__list {
+  padding-bottom: 32px;
+}
+.mobile-contact-item__href {
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.02em;
+  color: $tittle-text-color;
+  text-decoration: none;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+    font-size: 40px;
+  }
+}
+
 .mobile-social-list {
   display: flex;
   flex-wrap: wrap;
+}
+
+.mobile-social-list__item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.mobile-social-list__link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 18px;
+  color: $tittle-text-color;
+  background-color: $primary-text-color;
+  transition: color 250ms $time-animacion,
+    background-color 250ms $time-animacion;
+
   &__item:not(:last-child) {
     margin-right: 10px;
   }
-  &__link {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    font-size: 18px;
-    color: $content-text-color;
-    background-color: $primary-text-color;
-    transition: color 250ms $time-animacion,
-      background-color 250ms $time-animacion;
-
-    &__item:not(:last-child) {
-      margin-right: 10px;
-    }
-    &:focus,
-    &:hover {
-      color: $accent-color;
-    }
-  }
-  &__link::after {
-    content: "";
-    height: 22px;
-    width: 1px;
-    margin-left: 10px;
-  }
-  &__item:not(:last-child) &__link::after {
-    background-color: $mobile-bcg-color;
+  &:focus,
+  &:hover {
+    color: $accent-color;
   }
 }
+
+.mobile-social-list__link::after {
+  content: "";
+  height: 22px;
+  width: 1px;
+  margin-left: 10px;
+}
+
+.mobile-social-list__item:not(:last-child) {
+  background-color: $mobile-bcg-color;
+}
+.mobile-social-list__link::after {
+  background-color: $mobile-bcg-color;
+}
+
+// Мобільна кнопка
 
 .burgger-icon {
   width: 40px;
@@ -113,7 +129,7 @@
   padding: 0;
   margin: 0;
   border: none;
-  background: $primary-text-color;
+  color: $primary-text-color;
   fill: currentColor;
   transition: fill 250ms $time-animacion;
 
@@ -121,11 +137,11 @@
   &:hover {
     fill: $accent-color;
   }
-
   @media screen and (min-width: 767px) {
     display: none;
   }
 }
+
 .mobile__button-close {
   position: absolute;
   padding: 0;
@@ -142,9 +158,4 @@
   &:hover {
     fill: $accent-color;
   }
-}
-
-.mobile-close-icon {
-  width: 40px;
-  height: 40px;
 }
