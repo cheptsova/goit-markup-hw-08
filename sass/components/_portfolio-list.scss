@@ -9,14 +9,13 @@
 }
 
 .portofolio-list__item {
-  display: block;
   width: 100%;
-
   @include tablet {
-    flex-basis: calc(50% - $card-set-gap);
+    display: block;
+    flex-basis: calc(50% - 30px);
   }
-
   @include desktop {
+    display: block;
     flex-basis: calc((100% - 2 * 30px) / 3);
   }
 }

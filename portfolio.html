@@ -24,6 +24,15 @@
           <a class="logo-link" href="./index.html">
             <span class="logo-link__span">Web</span>Studio
           </a>
+          <button
+            type="button"
+            class="button-open js-open-menu"
+            aria-controls="mobile"
+          >
+            <svg class="burger-icon" width="40px" height="40px">
+              <use href="./images/icons.svg#icon-menu_40px"></use>
+            </svg>
+          </button>
           <ul class="header-list">
             <li class="header-list__item">
               <a class="header-list__link" href="./index.html">Студія</a>
@@ -614,5 +623,69 @@
         </div>
       </div>
     </footer>
+    <div class="mobile js-menu-container" id="mobile">
+      <ul class="mobile-list">
+        <li class="mobile-list__item">
+          <a class="mobile-list__link" href="./index.html">Студія</a>
+        </li>
+        <li class="mobile-list__item">
+          <a class="mobile-list__link" href="./portfolio.html">Портфоліо</a>
+        </li>
+        <li class="mobile-list__item">
+          <a class="mobile-list__link" href="">Контакти</a>
+        </li>
+      </ul>
+      <ul class="mobile-contact-item">
+        <li class="mobile-contact-item__list">
+          <a
+            class="mobile-contact-item__href mobile-contact-item__size"
+            href="mailto:info@devstudio.com"
+          >
+            info@devstudio.com</a
+          >
+        </li>
+        <li class="mobile-contact-item__list">
+          <a class="mobile-contact-item__href" href="tel:+380961111111">
+            +38 096 111 11 11</a
+          >
+        </li>
+      </ul>
+      <ul class="mobile-social-list">
+        <li class="mobile-social-list__item">
+          <a
+            href="https://instagram.com"
+            class="mobile-social-list__link mobile-social-list__link-bottom"
+            >Instagram</a
+          >
+        </li>
+        <li class="mobile-social-list__item">
+          <a
+            href="https://twitter.com"
+            class="mobile-social-list__link mobile-social-list__link-bottom"
+            >Twitter</a
+          >
+        </li>
+        <li class="mobile-social-list__item">
+          <a
+            href="https://facebook.com"
+            class="mobile-social-list__link mobile-social-list__link-bottom"
+            >Facebook</a
+          >
+        </li>
+        <li class="mobile-social-list__item">
+          <a
+            href="https://linkedin.com"
+            class="mobile-social-list__link mobile-social-list__link-bottom"
+            >LinkedIn</a
+          >
+        </li>
+      </ul>
+      <button type="button" class="mobile__button-close js-close-menu">
+        <svg class="mobile-close-icon" width="40px" height="40px">
+          <use href="./images/icons.svg#icon-close_40px"></use>
+        </svg>
+      </button>
+    </div>
+    <script src="./js/mobile.js"></script>
   </body>
 </html>
