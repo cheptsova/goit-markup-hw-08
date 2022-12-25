@@ -194,51 +194,38 @@ img {
 }
 @media screen and (min-width: 768px) {
   .contact-item {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    display: block;
+    padding-top: 21px;
+    margin-left: auto;
   }
 }
 @media screen and (min-width: 1200px) {
   .contact-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
     text-decoration: none;
-    margin-left: auto;
+    padding-top: 0px;
   }
 }
 
 @media screen and (min-width: 768px) {
   .contact-item__list-mail {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    margin-left: 90px;
+    margin-bottom: 10px;
   }
 }
 @media screen and (min-width: 1200px) {
   .contact-item__list-mail {
     margin-left: 0px;
+    margin-bottom: 0px;
   }
 }
 
-.contact-item__list-tel {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-left: 90px;
-}
 @media screen and (min-width: 1200px) {
   .contact-item__list-tel {
     margin-left: 30px;
@@ -398,10 +385,16 @@ img {
 }
 
 .card-content {
+  height: 146px;
   padding: 20px 24px;
   border-left: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
+}
+@media screen and (min-width: 1200px) {
+  .card-content {
+    height: auto;
+  }
 }
 
 .card-content__tittle {
@@ -441,6 +434,8 @@ img {
     -webkit-box-align: baseline;
         -ms-flex-align: baseline;
             align-items: baseline;
+    padding-left: 76px;
+    padding-right: 89px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -451,6 +446,8 @@ img {
         -ms-flex-pack: baseline;
             justify-content: baseline;
     text-align: start;
+    padding-left: 0px;
+    padding-right: 0px;
   }
 }
 
@@ -725,7 +722,7 @@ img {
           box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
   border-radius: 0px 0px 4px 4px;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 768px) {
   .team-list__item {
     -ms-flex-preferred-size: calc(50% - 30px);
         flex-basis: calc(50% - 30px);
@@ -823,7 +820,7 @@ img {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   padding-top: 48px;
   padding-bottom: 48px;
@@ -876,8 +873,7 @@ img {
 }
 
 .mobile-contact-item {
-  margin-top: 306px;
-  margin-bottom: 64px;
+  margin-top: auto;
 }
 
 .mobile-contact-item__list {
@@ -907,7 +903,7 @@ img {
 
 .mobile-contact-item__size {
   font-weight: 500;
-  font-size: 34px;
+  font-size: 33px;
   line-height: 1.18;
   color: #2196f3;
 }
@@ -983,6 +979,7 @@ img {
   padding: 0;
   margin: 0;
   border: none;
+  background-color: #ffffff;
   color: #212121;
   fill: currentColor;
   -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);

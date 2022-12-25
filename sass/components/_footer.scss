@@ -12,12 +12,16 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: baseline;
+    padding-left: 76px;
+    padding-right: 89px;
   }
 
   @include desktop {
     flex-wrap: nowrap;
     justify-content: baseline;
     text-align: start;
+    padding-left: 0px;
+    padding-right: 0px;
   }
 }
 .footer-logo {

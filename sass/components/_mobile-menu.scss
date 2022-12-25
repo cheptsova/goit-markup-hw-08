@@ -2,7 +2,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   padding-top: 48px;
   padding-bottom: 48px;
@@ -16,6 +16,7 @@
   letter-spacing: 0.02em;
   transform: translateX(100%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1) 150ms;
+
   @media screen and (min-width: 768px) {
     display: none;
   }
@@ -43,8 +44,7 @@
 }
 
 .mobile-contact-item {
-  margin-top: 306px;
-  margin-bottom: 64px;
+  margin-top: auto;
 }
 
 .mobile-contact-item__list {
@@ -72,7 +72,7 @@
 
 .mobile-contact-item__size {
   font-weight: 500;
-  font-size: 34px;
+  font-size: 33px;
   line-height: 1.18;
   color: $accent-color;
 }
@@ -140,6 +140,7 @@
   padding: 0;
   margin: 0;
   border: none;
+  background-color: $primary-text-color;
   color: $tittle-text-color;
   fill: currentColor;
   transition: fill 250ms $time-animacion;

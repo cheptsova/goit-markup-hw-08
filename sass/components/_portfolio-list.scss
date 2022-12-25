@@ -54,10 +54,15 @@
 }
 
 .card-content {
+  height: 146px;
   padding: 20px 24px;
   border-left: 1px solid $portfolio-border;
   border-bottom: 1px solid $portfolio-border;
   border-right: 1px solid $portfolio-border;
+
+  @include desktop {
+    height: auto;
+  }
 }
 .card-content__tittle {
   color: $tittle-text-color;

@@ -6,11 +6,11 @@
   height: 600px;
   background-color: $hero-bcg-color;
   background-image: linear-gradient(to right, $hero-gradient, $hero-gradient),
-    url(../../images/background-img_mob.jpg);
+    url(../images/background-img_mob.jpg);
 
   @include retina {
     background-image: linear-gradient(to right, $hero-gradient, $hero-gradient),
-      url(../../images/background-img__mob-2x.jpg);
+      url(../images/background-img__mob-2x.jpg);
   }
   background-position: center;
   background-repeat: no-repeat;
@@ -19,7 +19,7 @@
 
   @include tablet {
     background-image: linear-gradient(to right, $hero-gradient, $hero-gradient),
-      url(../../images/background-img_tablet.jpg);
+      url(../images/background-img_tablet.jpg);
 
     @include retina {
       background-image: linear-gradient(

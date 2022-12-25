@@ -97,33 +97,33 @@
   display: none;
 
   @include tablet {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
+    // display: flex;
+    // flex-wrap: wrap;
+    // align-items: center;
+    display: block;
+    padding-top: 21px;
+    margin-left: auto;
   }
 
   @include desktop {
+    display: flex;
+    align-items: center;
     flex-wrap: nowrap;
     text-decoration: none;
-    margin-left: auto;
+    padding-top: 0px;
   }
 }
 .contact-item__list-mail {
   @include tablet {
-    display: flex;
-    align-items: center;
-    margin-left: 90px;
+    margin-bottom: 10px;
   }
 
   @include desktop {
     margin-left: 0px;
+    margin-bottom: 0px;
   }
 }
 .contact-item__list-tel {
-  display: flex;
-  align-items: center;
-  margin-left: 90px;
-
   @include desktop {
     margin-left: 30px;
   }
