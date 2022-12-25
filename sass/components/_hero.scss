@@ -27,18 +27,18 @@
           $hero-gradient,
           $hero-gradient
         ),
-        url(../../images/background-img_tablet-2x.jpg);
+        url(../images/background-img_tablet-2x.jpg);
     }
   }
 
   @include desktop {
     background-image: linear-gradient(to right, $hero-gradient, $hero-gradient),
-      url(../../images/background-img.jpg);
+      url(../images/background-img.jpg);
   }
 
   @include retina {
     background-image: linear-gradient(to right, $hero-gradient, $hero-gradient),
-      url(../../images/background-img-2x.jpg);
+      url(../images/background-img-2x.jpg);
   }
 }
 
