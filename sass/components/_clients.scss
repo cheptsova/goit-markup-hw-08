@@ -9,6 +9,7 @@
   }
 }
 .clients__tittle {
+  margin-bottom: 30px;
   font-weight: 700;
   font-size: 28px;
   line-height: 1.14;
@@ -24,33 +25,35 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  gap: 30px;
 }
 .clients-list__item {
-  display: flex;
-  margin: 0 auto;
+  // display: flex;
+  // margin: 0 auto;
   // display: inline-block;
 
-  // @include tel {
-  //   flex-basis: calc(50% - $card-set-gap);
-  //   margin-top: 30px;
-  // }
+  @include tel {
+    flex-basis: calc(50% - $card-set-gap);
+  }
 
   @include tablet {
     flex-basis: calc((100% - 2 * $card-set-gap) / 3);
-    width: 226px;
   }
 
   @include desktop {
     flex-basis: calc((100% - 5 * $card-set-gap) / 6);
-    width: 170px;
   }
 }
+
+// .clients-list__item:not(:last-child) {
+//   margin-bottom: 30px;
+// }
 .clients-list__href {
   align-items: center;
   display: flex;
   justify-content: center;
   height: 92px;
-  margin-top: 30px;
+  width: 210px;
   color: $svg-color;
   border: 1px solid $svg-color;
   border-radius: 4px;
@@ -70,14 +73,6 @@
 
 .clients-list__svg {
   fill: currentColor;
-  width: 210px;
-  height: 92px;
-
-  @include tablet {
-    width: 226px;
-  }
-
-  @include desktop {
-    width: 170px;
-  }
+  width: 106px;
+  height: 60px;
 }

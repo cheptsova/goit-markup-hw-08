@@ -10,10 +10,8 @@
   @include tablet {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: baseline;
-    padding-left: 76px;
-    padding-right: 89px;
   }
 
   @include desktop {

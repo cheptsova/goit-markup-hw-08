@@ -428,14 +428,11 @@ img {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
     -webkit-box-align: baseline;
         -ms-flex-align: baseline;
             align-items: baseline;
-    padding-left: 76px;
-    padding-right: 89px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -903,7 +900,7 @@ img {
 
 .mobile-contact-item__size {
   font-weight: 500;
-  font-size: 33px;
+  font-size: 28px;
   line-height: 1.18;
   color: #2196f3;
 }
