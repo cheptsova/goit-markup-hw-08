@@ -530,6 +530,11 @@ img {
   text-transform: uppercase;
   color: #ffffff;
 }
+@media screen and (min-width: 768px) {
+  .footer-wrapper__tittle {
+    margin-top: 0px;
+  }
+}
 
 @media screen and (min-width: 768px) {
   .container-form {
@@ -548,6 +553,7 @@ img {
   .container-form {
     display: block;
     margin-left: 93px;
+    margin-top: 0px;
   }
 }
 

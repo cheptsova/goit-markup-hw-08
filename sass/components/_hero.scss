@@ -3,7 +3,7 @@
   text-align: center;
   margin: 0 auto;
   max-width: 1600px;
-  height: 600px;
+  height: 400px;
   background-color: $hero-bcg-color;
   background-image: linear-gradient(to right, $hero-gradient, $hero-gradient),
     url(../images/background-img_mob.jpg);
@@ -14,8 +14,8 @@
   }
   background-position: center;
   background-repeat: no-repeat;
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 118px;
+  padding-bottom: 118px;
 
   @include tablet {
     background-image: linear-gradient(to right, $hero-gradient, $hero-gradient),
@@ -34,6 +34,9 @@
   @include desktop {
     background-image: linear-gradient(to right, $hero-gradient, $hero-gradient),
       url(../images/background-img.jpg);
+    height: 600px;
+    padding-top: 200px;
+    padding-bottom: 200px;
   }
 
   @include retina {
